@@ -1,12 +1,16 @@
-/* Variables de colores y fuentes */
+/* --- Variables de colores (nueva paleta azul-tecnológico) --- */
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --text-color: #333;
-  --light-bg: #f8fafc;
+  --primary-color: #2563eb;       /* Azul vibrante (Botones, énfasis) */
+  --primary-dark: #1d4ed8;       /* Azul más oscuro (Hover) */
+  --secondary-color: #3b82f6;    /* Azul medio (Títulos) */
+  --accent-color: #60a5fa;       /* Azul claro (Detalles) */
+  --text-color: #1e293b;         /* Azul oscuro casi negro (Texto) */
+  --light-bg: #f0f9ff;           /* Fondo azul muy claro */
+  --white: #ffffff;              /* Blanco puro */
+  --gradient-blue: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
 }
 
-/* Reset básico */
+/* --- Reset y estilos base --- */
 * {
   margin: 0;
   padding: 0;
@@ -17,102 +21,124 @@ body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
+  background-color: var(--white); /* Fondo blanco para contraste */
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Header */
+/* --- Header (ahora con gradiente azul) --- */
 .header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+  background: var(--gradient-blue);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: var(--text-color);
+  color: var(--white) !important; /* Texto blanco en el menú */
   font-weight: 500;
 }
 
-/* Hero Section */
+.nav-links a:hover {
+  opacity: 0.9;
+}
+
+/* --- Hero Section (portada con gradiente) --- */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-bg.jpg');
-  background-size: cover;
-  color: white;
+  background: var(--gradient-blue);
+  color: var(--white);
   text-align: center;
-  padding: 5rem 0;
+  padding: 6rem 0;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 .cta-button {
-  display: inline-block;
-  background: var(--primary-color);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 1rem;
+  background: var(--white);
+  color: var(--primary-color) !important;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.3s;
 }
 
-/* Secciones */
+.cta-button:hover {
+  transform: translateY(-3px);
+  background: var(--white);
+}
+
+/* --- Secciones (fondos y bordes azules) --- */
 .section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .section-title {
+  color: var(--secondary-color);
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 0.5rem auto 0;
+}
+
+.bg-light {
+  background-color: var(--light-bg);
+  border-radius: 15px;
+}
+
+/* --- Tarjetas (cards) --- */
+.card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
 }
 
-.grid-2-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(59, 130, 246, 0.2);
 }
 
-.custom-list li {
-  list-style: none;
-  margin-bottom: 0.5rem;
+.icon-large {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
 }
 
-/* Footer */
+/* --- Footer (azul oscuro) --- */
 .footer {
   background: var(--text-color);
-  color: white;
-  padding: 3rem 0;
+  color: var(--white);
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+.footer a:hover {
+  color: var(--accent-color);
 }
 
-.footer a {
-  color: white;
+.footer-social i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+  .grid-2-columns, .grid-3-columns {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
