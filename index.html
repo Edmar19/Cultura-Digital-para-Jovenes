@@ -3,117 +3,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sitio educativo sobre cultura digital para jóvenes. Talleres, guías y recursos gratuitos.">
-  <title>Cultura Digital para Jóvenes | Uso Seguro de Herramientas Digitales</title>
-  <!-- Preconexión para mejorar performance -->
+  <meta name="description" content="Sitio educativo sobre cultura digital para jóvenes. Talleres de seguridad, productividad y recursos gratuitos.">
+  <title>Cultura Digital para Jóvenes | Tecnología y Educación</title>
+  <!-- Preconexiones para performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Fonts de Google (opcional) -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <!-- Bootstrap Icons (para íconos modernos) -->
+  <!-- Fuentes Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <!-- Tu CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Favicon (recomendado) -->
+  <!-- Favicon -->
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header con navegación -->
+  <!-- Header con gradiente azul -->
   <header class="header">
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="logo">
-          <img src="img/logo.jpeg" alt="Logo del proyecto" width="100">
+          <img src="img/logo.png" alt="Logo Cultura Digital" width="130" height="auto">
         </a>
         <ul class="nav-links">
           <li><a href="#objetivo">Objetivo</a></li>
-          <li><a href="#acciones">Acciones</a></li>
-          <li><a href="recursos.html">Recursos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#acciones">Talleres</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <button class="menu-toggle" aria-label="Abrir menú">
+        <button class="menu-toggle" aria-label="Menú móvil">
           <i class="bi bi-list"></i>
         </button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section (portada llamativa) -->
+  <!-- Hero Section con gradiente -->
   <section class="hero">
     <div class="container">
-      <h1>Proyecto Cultura Digital para Jóvenes</h1>
-      <p class="subtitle">Promoviendo el uso seguro y productivo de herramientas digitales</p>
-      <a href="#acciones" class="cta-button">Ver talleres <i class="bi bi-arrow-right"></i></a>
+      <h1>Explora el Mundo Digital con Confianza</h1>
+      <p class="subtitle">Aprende seguridad, productividad y ciudadanía digital con nuestros recursos gratuitos</p>
+      <div class="hero-buttons">
+        <a href="#acciones" class="cta-button">
+          <i class="bi bi-arrow-down-circle"></i> Ver Talleres
+        </a>
+        <a href="#contacto" class="cta-button-outline">
+          <i class="bi bi-envelope"></i> Contactarnos
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Sección Objetivo -->
-    <section id="objetivo" class="section">
-      <h2 class="section-title">Objetivo del Proyecto</h2>
+  <!-- Sección Objetivo -->
+  <section id="objetivo" class="section">
+    <div class="container">
+      <h2 class="section-title">Nuestro Propósito</h2>
       <div class="grid-2-columns">
         <div class="content">
-          <p>Ofrecemos un sitio web educativo gratuito y acciones formativas para jóvenes de nivel medio superior, con el fin de:</p>
+          <p class="highlight-text">Empoderamos a jóvenes con habilidades digitales esenciales para el siglo XXI.</p>
           <ul class="custom-list">
-            <li><i class="bi bi-check-circle"></i> Fomentar la seguridad digital.</li>
-            <li><i class="bi bi-check-circle"></i> Potenciar la productividad con herramientas tecnológicas.</li>
-            <li><i class="bi bi-check-circle"></i> Brindar acceso a recursos educativos de calidad.</li>
+            <li><i class="bi bi-shield-check"></i> Seguridad en línea y protección de datos</li>
+            <li><i class="bi bi-bar-chart"></i> Herramientas para el éxito académico</li>
+            <li><i class="bi bi-globe"></i> Ciudadanía digital responsable</li>
           </ul>
         </div>
         <div class="image">
-          <img src="img/objetivo.jpg" alt="Jóvenes aprendiendo tecnología" class="img-rounded">
+          <img src="img/digital-skills.jpg" alt="Jóvenes usando tecnología" class="img-shadow">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Sección Acciones -->
-    <section id="acciones" class="section bg-light">
-      <h2 class="section-title">Nuestras Acciones Formativas</h2>
+  <!-- Sección Talleres (Acciones) -->
+  <section id="acciones" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Nuestros Talleres</h2>
       <div class="grid-3-columns">
+        <!-- Taller 1 -->
         <div class="card">
-          <i class="bi bi-shield-lock icon-large"></i>
-          <h3>Talleres de Seguridad</h3>
-          <p>Aprende a proteger tu identidad digital y navegar seguro en internet.</p>
+          <div class="card-icon">
+            <i class="bi bi-lock"></i>
+          </div>
+          <h3>Seguridad Digital</h3>
+          <p>Aprende a crear contraseñas seguras, detectar fraudes y proteger tu privacidad.</p>
+          <a href="#" class="card-link">Más info <i class="bi bi-arrow-right"></i></a>
         </div>
+        
+        <!-- Taller 2 -->
         <div class="card">
-          <i class="bi bi-lightbulb icon-large"></i>
-          <h3>Guías de Productividad</h3>
-          <p>Domina herramientas como hojas de cálculo, presentaciones y más.</p>
+          <div class="card-icon">
+            <i class="bi bi-file-earmark-text"></i>
+          </div>
+          <h3>Ofimática Profesional</h3>
+          <p>Domina Word, Excel y PowerPoint para trabajos escolares y proyectos.</p>
+          <a href="#" class="card-link">Más info <i class="bi bi-arrow-right"></i></a>
         </div>
+        
+        <!-- Taller 3 -->
         <div class="card">
-          <i class="bi bi-book icon-large"></i>
-          <h3>Recursos Gratuitos</h3>
-          <p>Descarga materiales educativos sobre ciudadanía digital.</p>
+          <div class="card-icon">
+            <i class="bi bi-megaphone"></i>
+          </div>
+          <h3>Comunicación Online</h3>
+          <p>Escribe emails profesionales y usa redes sociales de manera efectiva.</p>
+          <a href="#" class="card-link">Más info <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Sección Recursos -->
+  <section id="recursos" class="section">
+    <div class="container">
+      <h2 class="section-title">Recursos Gratuitos</h2>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <i class="bi bi-file-earmark-pdf"></i>
+          <h4>Guía de Seguridad</h4>
+          <a href="#" class="download-btn">Descargar <i class="bi bi-download"></i></a>
+        </div>
+        <div class="resource-card">
+          <i class="bi bi-file-earmark-excel"></i>
+          <h4>Plantillas Excel</h4>
+          <a href="#" class="download-btn">Descargar <i class="bi bi-download"></i></a>
+        </div>
+        <div class="resource-card">
+          <i class="bi bi-collection-play"></i>
+          <h4>Videos Tutoriales</h4>
+          <a href="#" class="download-btn">Ver <i class="bi bi-play-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="section bg-dark">
+    <div class="container">
+      <h2 class="section-title">¿Listo para Aprender?</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="bi bi-send"></i> Enviar Mensaje
+        </button>
+      </form>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <img src="img/logo-white.png" alt="Logo" width="100">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="img/logo-white.png" alt="Logo" width="120">
+          <p>Promoviendo habilidades digitales desde 2025</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-col">
           <h4>Enlaces</h4>
           <ul>
             <li><a href="#objetivo">Objetivo</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="privacidad.html">Privacidad</a></li>
+            <li><a href="#acciones">Talleres</a></li>
+            <li><a href="#recursos">Recursos</a></li>
           </ul>
         </div>
-        <div class="footer-social">
-          <h4>Síguenos</h4>
-          <a href="#"><i class="bi bi-facebook"></i></a>
-          <a href="#"><i class="bi bi-instagram"></i></a>
-          <a href="#"><i class="bi bi-youtube"></i></a>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Redes</h4>
+          <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
         </div>
       </div>
-      <hr>
-      <p class="copyright">&copy; 2025 Proyecto Cultura Digital. Todos los derechos reservados.</p>
+      <div class="copyright">
+        <p>&copy; 2025 Proyecto Cultura Digital. Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 
